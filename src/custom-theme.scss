@@ -1,0 +1,66 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+$SELS-Blue: (
+    50 : #e0effa,
+    100 : #b3d7f2,
+    200 : #80bce9,
+    300 : #4da1e0,
+    400 : #268cd9,
+    500 : #0078d2,
+    600 : #0070cd,
+    700 : #0065c7,
+    800 : #005bc1,
+    900 : #0048b6,
+    A100 : #dfe9ff,
+    A200 : #acc7ff,
+    A400 : #79a4ff,
+    A700 : #5f93ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$SELS-primary: mat.define-palette($SELS-Blue,500);
+$SELS-accent: mat.define-palette($SELS-Blue);
+
+// The warn palette is optional (defaults to red).
+$SELS-warn: mat.define-palette($SELS-Blue);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$SELS-theme: mat.define-light-theme((
+  color: (
+    primary: $SELS-primary,
+    accent: $SELS-accent,
+    warn: $SELS-warn,
+  )
+));
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($SELS-theme);
+

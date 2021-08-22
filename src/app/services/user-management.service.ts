@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AuthenticatedUser } from '../models/AuthenticatedUser';
+import { AuthenticatedUser } from '../models/authenticatedUser';
 import { Result } from '../models/enums';
 
 @Injectable({

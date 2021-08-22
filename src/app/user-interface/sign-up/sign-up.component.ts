@@ -32,11 +32,11 @@ export class SignUpComponent implements OnInit {
         if (tPassword === tConfirmPassword) {
           const tEmail: string = this.form.controls['email'].value;
           const tUser: User = new User();
-          tUser.name = '';
-          tUser.loginName = tEmail;
-          tUser.email = tEmail;
-          tUser.password = tPassword;
-          tUser.mobileNumber = this.form.controls['mobileNumber'].value;
+          tUser.FullName = '';
+          tUser.Email = tEmail;
+          tUser.Email = tEmail;
+          tUser.Password = tPassword;
+          tUser.MobileNumber = this.form.controls['mobileNumber'].value;
           const tResult: Result = await this.authenticationService.SignUp(tUser);
         }
       }

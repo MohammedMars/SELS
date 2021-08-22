@@ -1,10 +1,10 @@
 import { Inject, InjectionToken, Injector } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { fromEvent, Observable, throwError } from 'rxjs';
-import { Constants } from '../models/Constants';
 import { timeout } from 'rxjs/operators';
 export const DEFAULT_TIMEOUT = new InjectionToken<number>('defaultTimeout');
 import { Injectable } from '@angular/core';
+import { Constants } from '../models/Constants';
 
 @Injectable({
   providedIn: 'root'

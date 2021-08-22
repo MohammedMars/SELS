@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CommunicationService } from '../communication/communication.service';
-import { AuthenticatedUser } from '../models/AuthenticatedUser';
+import { AuthenticatedUser } from '../models/authenticatedUser';
 import { Result } from '../models/enums';
 import { User } from '../models/user';
 import { UserManagementService } from './user-management.service';

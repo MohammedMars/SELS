@@ -1,17 +1,17 @@
 export class User {
-    public id: number;
-    public name: string;
-    public loginName: string;
-    public email: string;
-    public mobileNumber: string;
-    public password: string;
+    public Id: number;
+    public FullName: string;
+    public Email: string;
+    public MobileNumber: string;
+    public Password: string;
+    public TypeId: number;
 
     constructor(){
-        this.id = -1;
-        this.name ='';
-        this.loginName = '';
-        this.email = '';
-        this.mobileNumber = '';
-        this.password = '';
+        this.Id = -1;
+        this.FullName ='';
+        this.Email = '';
+        this.MobileNumber = '';
+        this.Password = '';
+        this.TypeId = -1;
     }
 }
